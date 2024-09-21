@@ -10,7 +10,8 @@ import Foundation
 import AnyCodable
 #endif
 
-public struct Article: Codable, Hashable {
+public struct Article: Codable, Hashable, Identifiable {
+    public var id = UUID()
 
     public var source: Source?
     public var author: String?
